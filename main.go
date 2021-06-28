@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"app/configs"
+	"app/routes"
+)
 
 func main() {
-	fmt.Println("Hello World development")
-	fmt.Println("Hello World feature B")
-	fmt.Println("Hello World feature C")
+	configs.InitDB()
+	e := routes.New()
+	e.Start(":8000")
 }
