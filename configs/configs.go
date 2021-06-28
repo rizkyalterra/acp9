@@ -40,8 +40,6 @@ func InitDB() {
 func AutoMigrate() {
 	DB.AutoMigrate(&user.School{})
 	DB.AutoMigrate(&user.User{})
-	// DB.AutoMigrate(&models.Categories{})
-	// DB.AutoMigrate(&models.Products{})
 }
 
 func InitDBTest() {
